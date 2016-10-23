@@ -8,7 +8,7 @@ use strict;
 #as in, take a snptable file in excel, transpose, 
 #filter for N7 for one isolate, save as .csv, cut -d',' -f1
 
-#and then shove it into an array and grep the output of death.pl 
+#and then shove it into an array and grep the output of no_coverage_list.pl 
 #to see if the N7s match the no coverage areas of assembly
 #hint: it does
 

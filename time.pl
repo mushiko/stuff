@@ -8,7 +8,6 @@ use Date::Parse;
 
 # 2016/03/29 Vivian Yean z3414771
 # In which Viv tries to identify the sequences that are taking longest to run
-# rip viv
 # http://stackoverflow.com/questions/4460610/how-can-i-get-the-difference-of-two-timestamps-using-perl
 # http://www.perlmonks.org/?node=How%20do%20I%20get%20a%20file%27s%20timestamp%20in%20perl%3F
 my $ref = "SRR_Typhimurium";

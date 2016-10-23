@@ -6,7 +6,6 @@ use strict;
 #this script takes a file containing the SRR (or otherwise, probably can modify)
 #and puts it into the snpfilt.pl command to be appended to the batch files
 #the file name is because i was angry
-#previously called gdi.pl
 
 my $file = "SRRNum";
 open(my $fileHandle, "<", $file) or die "Cannot open: $file";

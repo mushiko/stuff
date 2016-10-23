@@ -28,4 +28,4 @@ use strict;
 #
 #
 #
-#           will be a script when gene_snps.pl works lmao
+#           will be a script when gene_snps.pl works 

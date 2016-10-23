@@ -5,7 +5,7 @@ use strict;
 
 #2016/09/17 Vivian Yean z3414771
 #generates a list of bases with no coverage
-#requires death.pl
+#requires no_coverage_list.pl 
 
 #file containing names of the isolates
 my $datalist = "dataList";
@@ -19,12 +19,12 @@ while (my $line = <$fh1>){
 #@isolates = split /\n/, $line;
 }
 #generate segments
-#run death.pl
+#run no_coverage_list.pl
 #print out list of positions in a giant jumble
 foreach $a (@isolates){
    system("less $datadir/$a/aln_contigs.cigarx|cut -f2,3|grep ^[0-9]|sort -n > segments");
    print "Printing: $a\n";
-   system("perl death.pl >> tmp");
+   system("perl no_coverage_list.pl >> tmp");
 }
 #sorts the tmp file and gets a list of unique positions
 #removes temp files
@@ -32,4 +32,3 @@ print "Combining files...\n";
 system("cat tmp |sort -n |uniq>made_list");
 system("rm tmp");
 system("rm segments");
-print "Done!! Wow Viv!\n";

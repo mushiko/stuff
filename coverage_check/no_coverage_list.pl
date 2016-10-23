@@ -9,10 +9,6 @@ use strict;
 #compares a full array of numbers 0..$refLength to zstart1 and end1
 #and prints out whatever not in the bounds
 #basically prints a list of positions with no coverage
-#previously death.pl, the first of many (three)
-#Me:  I wrote a script using death.pl so i can't change the name unless
-#     I go through and change it all
-#Dom: Accept death
 
 #the number is the length of LT2 ref genome
 #can comment out alternative line and use stdin

@@ -3,7 +3,7 @@ use warnings;
 use strict;
 
 #2016/10/21 Vivian Yean z3414771
-#script to count N7s across the snptable lol
+#script to count N7s across the snptable 
 
 my $file = $ARGV[0];
 open (my $fh, "<", $file) or die "Cannot open file: $!\n";

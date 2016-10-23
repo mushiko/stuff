@@ -4,8 +4,6 @@ use strict;
 
 
 #2016/09/19 Vivian Yean z3414771
-#i seek death
-#and a new name for my death files
 #outputs number of genes with Ns for each isolate
 
 my $iso = "dataList";
@@ -33,11 +31,7 @@ while (my $line1 = <$fh2>){
 }
 close $fh2;
 
-#for some reason out of the Anastasia's dataset
-#this loop doesn't process 4594 and 4595 
-#this is the second loop to do this
-#so i put atcg = 2 initially
-#because i know those two have no Ns
+#possible issues here
 my @count;
 my $in = 0;
 foreach $a (@isolates){

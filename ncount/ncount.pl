@@ -21,7 +21,7 @@ while (my $line = <$fh1>){
       }
       print "Total N = $count\n";
 #old testing line but tbh would've done the same thing as all the code above
-#oops lol
+#oops 
 #      system("less $input|grep ^$SRR|grep -o N|wc -l");
    }
 }

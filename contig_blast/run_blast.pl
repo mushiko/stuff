@@ -15,7 +15,5 @@ foreach $a (@stm){
       chomp $b;
       print "Running $b\n";
       system ("blastn -query contigs/$b -db loci/$a/${a}db -out loci/$a/$b.out");
-     # print "blastn -query contigs/$b -db loci/$a/${a}db -out loci/$a/$b.out";
-      #print "\n";
    }
 }

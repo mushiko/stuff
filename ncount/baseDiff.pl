@@ -5,6 +5,7 @@ use warnings;
 
 #2016/06/28 Vivian Yean z3414771
 #takes in a snptable -p R csv output and finds out how many of the filtered snps match the reference
+#compare output to ncount.pl
 
 #2016/09/14
 #fixed 
