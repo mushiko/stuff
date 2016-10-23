@@ -8,7 +8,7 @@ use strict;
 #this particular script works on no coverage areas
 #based heavily on between.pl, it's basically the same thing but with changed file stuff
 
-my $genes = "lt2_coreWODup.txt";
+my $genes = "core.bed";
 open (my $fh1, "<", $genes) or die "Cannot open $genes: $!";
 # stores STM number, start and end of each gene in separate arrays
 # index to refer to the same gene
@@ -16,11 +16,12 @@ my @stm;
 my @pStart;
 my @pEnd;
 while (my $line1 = <$fh1>){
-   if ($line1 =~ /CDS/){
+   if ($line1 =~ /gene/){
+      chomp $line1;
       my @line2 = split /\t/, $line1;
-      push(@stm, $line2[1]);
-      push(@pStart, $line2[2]);
-      push(@pEnd, $line2[3]);
+      push(@stm, $line2[3]);
+      push(@pStart, $line2[1]);
+      push(@pEnd, $line2[2]);
    }
 }
 close $fh1;
@@ -31,7 +32,7 @@ close $fh1;
 # > into new file
 my @pos;
 #reads from argument
-my $list = $ARGV[0];
+my $list = "list";
 open (my $f3, "<", $list) or die "Cannot open $list: $!";
 while (my $posLine = <$f3>){
    chomp ($posLine);

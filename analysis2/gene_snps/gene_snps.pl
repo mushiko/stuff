@@ -78,6 +78,7 @@ foreach $a (@stm){
    open (my $fh3, ">", "$dir/$a") or die "Cannot write $a: $!";
    print $fh3 $a; 
    my $hm_idx = $a - 1; 
+   print "lol = $hm_idx\n";
    if (!exists($hm{$hm_idx})){
       system ("cat $coreTable|cut -d',' -f1 >> $dir/$a");
    } else {

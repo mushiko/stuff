@@ -8,9 +8,9 @@ use strict;
 # 2 : Contains Ns
 # 3 : Useable
 
-my $file = "cs_out";
+my $file = $ARGV[0];
 #print "Creating file...\n";
-system("perl criteria_set.pl > $file");
+#system("perl criteria_set.pl > $file");
 open (my $fh1, "<", $file) or die "Cannot open $file: $!";
 
 #print "Generating output...\n";

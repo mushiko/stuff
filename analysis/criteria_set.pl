@@ -7,21 +7,23 @@ use strict;
 #NC denotes no coverage positions in that certain gene
 
 
-my $tableDir = "STM_SNPS";
+my $tableDir = "gene_snps/CORE_SNPS";
 
-my $genes = "lt2_coreWODup.txt";
+my $genes = "core.bed";
 open (my $fh1, "<", $genes) or die "Cannot open $genes: $!";
 # stores STM number, start and end of each gene in separate arrays
 # index to refer to the same gene
 my @stm;
 while (my $line1 = <$fh1>){
-   if ($line1 =~ /CDS/){
+   if ($line1 =~ /gene/){
+      chomp $line1;
       my @line2 = split /\t/, $line1;
-      push(@stm, $line2[1]);
+      push(@stm, $line2[3]);
    }
 }
 close $fh1;
 
+#output from position_sort.pl
 my $list = "coreList";
 my $sList = "STMList";
 system("less $list|grep STM|uniq > $sList");
@@ -37,6 +39,7 @@ close $fh2;
 foreach $a (@stm){
    my $file = "$tableDir/$a";
    print "$a\t";
+   my $nccount = 0;
    if ($a ~~ @noCov){
       print "NC\t";
    }
